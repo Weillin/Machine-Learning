@@ -9,7 +9,6 @@ import os
 import re
 import warnings
 
-
 warnings.filterwarnings('ignore')
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 plt.rcParams['font.sans-serif'] = ['SimHei']
@@ -18,6 +17,8 @@ np.set_printoptions(threshold=np.inf)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 '''加载和处理本地数据'''
+
+
 def load_data():
     x_list, y_list = [], []
     class_map = {'man': '0', 'dog': '1', 'cat': '2'}
@@ -47,7 +48,7 @@ def load_data():
         for filename in L:
             value = re.split('\\\|\.', filename)
             img_path = filename
-            img = Image.open(img_path).convert('RGB')  #以'RGB'模式读取图片
+            img = Image.open(img_path).convert('RGB')  # 以'RGB'模式读取图片
             img = img.resize((32, 32), Image.ANTIALIAS)
             img = np.array(img)
             # img = img / 255.   #图片归一化,可以在加载时处理,也可以在数据增强时处理
@@ -73,7 +74,10 @@ def load_data():
 
     return x_train, y_train, x_test, y_test
 
+
 '''建立模型'''
+
+
 def LeNet5(x_train, y_train, x_test, y_test):
     model = models.Sequential([
         Conv2D(filters=6, kernel_size=(5, 5), activation='sigmoid', input_shape=(32, 32, 3))
@@ -132,7 +136,10 @@ def LeNet5(x_train, y_train, x_test, y_test):
 
     return acc, val_acc, loss, val_loss
 
+
 '''可视化准确率和损失'''
+
+
 def result_show(acc, val_acc, loss, val_loss):
     # 查看准确率
     plt.subplot(1, 2, 1)
