@@ -25,4 +25,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     predict_result(args.file)
 
-    # python torch_request.py --file=./dog.jpg    #路径不加引号
+    # python torch_request.py --file=./data/dog.jpg    #路径不加引号

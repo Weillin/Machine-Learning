@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 model = None
 use_gpu = False  # 是否使用GPU训练模型
 
-with open('class_map.txt', 'r') as f:
+with open('./data/class_map.txt', 'r') as f:
     label_map = eval(f.read())  # 转化成字典
 
 '''加载模型'''
