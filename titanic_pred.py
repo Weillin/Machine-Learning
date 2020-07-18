@@ -46,8 +46,6 @@ def deal_with():
     # corr = train.corr()   #相关系数
     # print(corr)
 
-    # train['Cabin'] = train['Cabin'].map(lambda x: 'y' if type(x) == str else 'n')
-
     sex_map = {'male': 1, 'female': 0}
     full['Sex'] = full['Sex'].map(sex_map)
 

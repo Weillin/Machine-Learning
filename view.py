@@ -288,3 +288,20 @@ axs3.pie(embarked_pclass.loc['S'], autopct='%.2f%%', labels=['三等舱', '二�
          , textprops=dict(size=15), colors=['#698B69', '#76EE00', '#76EEC6'], startangle=180)
 axs3.set_title('英国乘客各舱位占比')
 plt.show()
+
+plt.subplots(figsize=(10, 4))
+sns.heatmap(corr, annot=True)
+
+sns.countplot(x='Pclass', hue='Survived', data=train)
+
+sns.countplot(x='Sex', hue='Survived', data=train)
+
+train_age = sns.FacetGrid(train, col='Survived', height=5)
+train_age.map(plt.hist, 'Age', bins=40)
+
+fig = plt.figure(figsize=(10, 6))
+sns.violinplot(x='Survived', y='Age', data=train,
+               split=True, palette={0: 'r', 1: 'g'})
+plt.title('乘客年龄与存活关系')
+plt.ylabel('年龄')
+plt.show()
