@@ -28,8 +28,8 @@ def get_title(name):
 
 
 def deal_with():
-    train = pd.read_csv('./data/train.csv')
-    test = pd.read_csv('./data/test.csv')
+    train = pd.read_csv('./data/titanic_train.csv')
+    test = pd.read_csv('./data/titanic_test.csv')
 
     full = train.append(test, ignore_index=True)
     # print(full.isnull().sum())

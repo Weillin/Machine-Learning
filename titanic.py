@@ -22,8 +22,8 @@ class titanic():
 
     def __init__(self):
         '''导入数据'''
-        self.train = pd.read_csv('./data/train.csv')
-        self.test = pd.read_csv('./data/test.csv')
+        self.train = pd.read_csv('./data/titanic_train.csv')
+        self.test = pd.read_csv('./data/titanic_test.csv')
         self.train.drop('PassengerId', axis=1, inplace=True)
         self.sex_map = {'male': 1, 'female': 0}
         self.title_map = {
