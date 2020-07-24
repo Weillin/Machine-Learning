@@ -32,7 +32,7 @@ x_train /= 255
 x_val /= 255
 x_test /= 255
 
-batch_size = 256
+batch_size = 64
 classes = 10
 epochs = 5
 
@@ -58,7 +58,7 @@ model = keras.models.Sequential([
     , Dropout(0.5)
     , Dense(2048, activation='relu')
     , Dropout(0.5)
-    , Dense(10, activation='softmax')
+    , Dense(classes, activation='softmax')
 ])
 
 model.compile(optimizer='adam'
@@ -66,7 +66,7 @@ model.compile(optimizer='adam'
               , metrics=['accuracy'])
 
 '''断点续训'''
-save_path = './checkpoint/LeNet5.ckpt'
+save_path = './checkpoint/AlexNet.ckpt'
 if os.path.exists(save_path + '.index'):
     print('model loading')
     model.load_weights(save_path)
