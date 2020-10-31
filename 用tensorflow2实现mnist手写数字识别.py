@@ -36,7 +36,7 @@ model = keras.Sequential([
 
 # # 5.指定优化器、损失函数、评价指标
 
-# 优化器使用adam，损失函数使用交叉熵损失函数，评价指标用精确率
+# 优化器使用adam，损失函数使用交叉熵损失函数，评价指标用准确率
 
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
