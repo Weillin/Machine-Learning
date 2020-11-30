@@ -1,11 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # ### 1.导入依赖包
-
-# In[ ]:
-
-
 import re
 import os
 import time
@@ -15,10 +8,6 @@ from lxml import etree
 
 
 # ### 2.获取url
-
-# In[ ]:
-
-
 def get_url(url):
     # 伪造请求头
     headers = {
@@ -45,10 +34,6 @@ def get_url(url):
 
 
 # ### 3.解析url
-
-# In[ ]:
-
-
 def parse_url(u):
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36'
@@ -72,10 +57,6 @@ def parse_url(u):
 
 
 # ### 4.获取图片
-
-# In[ ]:
-
-
 def get_pic(node):
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36'
@@ -98,10 +79,6 @@ def get_pic(node):
 
 
 # ### 5.保存图片
-
-# In[ ]:
-
-
 def save_img(link, img_link, name, i):
     headers = {
         'Referer': link,
@@ -125,9 +102,6 @@ def save_img(link, img_link, name, i):
             print('图片存储失败')
 
 
-# In[ ]:
-
-
 def main():
     # 想要哪个分类直接把'qingchun'改为其他类即可
     # url = 'https://www.mm131.net/qingchun/'
@@ -137,9 +111,6 @@ def main():
     for i in url_list:
         url = 'https://www.mm131.net/' + i + '/'
         get_url(url)
-
-
-# In[ ]:
 
 
 if __name__ == '__main__':
