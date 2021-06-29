@@ -1,15 +1,20 @@
+conda env list                                                      显示所有虚拟环境
 conda create -n Pytorch python=3.9                                  创建虚拟环境
 conda activate 环境名                                               激活虚拟环境
 pip install ipykernel                                               在虚拟环境中安装ipykernel
 python -m ipykernel install --user --name 环境名                    使用ipykernel生成虚拟环境的kernel
 conda deactivate                                                    退出虚拟环境
 jupyter notebook                                                    启动notebook
+torch.cuda.is_available()                                           判断pytorch是否是GPU
+conda install pytorch torchvision torchaudio cudatoolkit=11.1
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
 
 
-pip install pip -U                                                                   更新pip
+pip install -U pip                                                                   更新pip
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple             修改pip为清华镜像源
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 库名                         临时使用清华镜像源
+sudo apt install unzip                                                               安装包
 
 
 git config --global user.name "qwl"
