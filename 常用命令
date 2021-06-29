@@ -1,0 +1,26 @@
+conda create -n Pytorch python=3.9                                  创建虚拟环境
+conda activate 环境名                                               激活虚拟环境
+pip install ipykernel                                               在虚拟环境中安装ipykernel
+python -m ipykernel install --user --name 环境名                    使用ipykernel生成虚拟环境的kernel
+conda deactivate                                                    退出虚拟环境
+jupyter notebook                                                    启动notebook
+
+
+
+pip install pip -U                                                                   更新pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple             修改pip为清华镜像源
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 库名                         临时使用清华镜像源
+
+
+
+
+
+
+
+
+
+
+
+
+
+
