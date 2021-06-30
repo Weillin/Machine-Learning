@@ -1,3 +1,5 @@
+watch -n 1 nvidia-smi                                               查看显存占有率
+
 conda env list                                                      显示所有虚拟环境
 conda create -n Pytorch python=3.9                                  创建虚拟环境
 conda activate 环境名                                               激活虚拟环境
@@ -11,7 +13,10 @@ jupyter kernelspec uninstall xxx                                    删除notebo
 conda install pytorch torchvision torchaudio cudatoolkit=11.1
 pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
-
+dirs="/home/ma-user/work/site-packages"
+if not os.path.exists(dirs):                                       判断文件夹如果不存在就创建
+    os.makedirs(dirs)
+sys.path.insert(0, '/home/ma-user/work/site-packages')             添加环境变量
 
 pip install -U pip                                                                   更新pip
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple             修改pip为清华镜像源
