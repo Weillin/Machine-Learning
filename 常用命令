@@ -1,4 +1,10 @@
 watch -n 1 nvidia-smi                                               查看显存占有率
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"                           服务挂掉
+print(tf.test.is_gpu_available())                                   查看tensorflow是否在GPU上面运行
+print(torch.cuda.is_available())                                    查看pytorch是否在GPU上面运行
+shift + 鼠标选择多个cell
+shift + M                                                           合并cell
+shift + ctrl + -                                                    拆分cell
 
 conda env list                                                      显示所有虚拟环境
 conda create -n Pytorch python=3.9                                  创建虚拟环境
