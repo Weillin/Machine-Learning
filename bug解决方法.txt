@@ -1,0 +1,8 @@
+RuntimeError: exp_vml_cpu not implemented for 'Long'
+TypeError: can't convert CUDA tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
+!pip install torchvision==0.9
+import torchvision
+print(torchvision.__version__)
+
+OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized. OMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause inco
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
