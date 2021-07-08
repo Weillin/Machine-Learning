@@ -10,3 +10,20 @@ res = etree.HTML(res.text)
 text = res.xpath('//span[@class="views-count"]/text()')
 text = re.findall(r'"viewNums":(.*?),"voteNums"', res.text)[0]
 time.sleep(random.randint(10, 30))
+
+
+with open('map.txt', 'a') as f:
+    data = {}
+    for i in node:
+        key = i[0]
+        value = str(i[1])
+        data[key] = value
+        s = str(data)
+    f.writelines(s + '\n')
+
+dir_in = 'pytorch'
+for root, dirs, files in os.walk(dir_in):
+    for file_name in files:
+        if file_name.endswith('.ipynb'):
+            file_path = os.path.join(root, file_name)
+            print(file_path)
