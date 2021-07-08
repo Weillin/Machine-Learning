@@ -1,0 +1,12 @@
+import requests
+import time
+import re
+import random
+from lxml import etree
+
+res = requests.get(url, headers=headers)
+res.encoding = 'utf-8'
+res = etree.HTML(res.text)
+text = res.xpath('//span[@class="views-count"]/text()')
+text = re.findall(r'"viewNums":(.*?),"voteNums"', res.text)[0]
+time.sleep(random.randint(10, 30))
