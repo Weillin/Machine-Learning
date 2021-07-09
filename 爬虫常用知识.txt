@@ -15,15 +15,20 @@ time.sleep(random.randint(10, 30))
 with open('map.txt', 'a') as f:
     data = {}
     for i in node:
-        key = i[0]
+        key = i[0]                                                                                             将字典存入txt文件
         value = str(i[1])
         data[key] = value
         s = str(data)
     f.writelines(s + '\n')
 
+with open('map.txt', 'r', encoding='utf-8', errors='ignore') as f:
+    text = f.read()                                                                                            读取txt文件
+    d = eval(text)
+    print(d)
+
 dir_in = 'pytorch'
 for root, dirs, files in os.walk(dir_in):
-    for file_name in files:
+    for file_name in files:                                                                               根据后缀获取所有文件路径
         if file_name.endswith('.ipynb'):
             file_path = os.path.join(root, file_name)
             print(file_path)
