@@ -10,6 +10,14 @@ shift + 鼠标选择多个cell
 shift + M                                                           合并cell
 shift + ctrl + -                                                    拆分cell
 
+git add .
+git commit -m 'xxx'
+git push
+git log
+git reset --soft HEAD^
+git reset --hard 71508a005727e8d9b6ddb267671a141d610c9d15
+git reset HEAD
+
 conda env list                                                      显示所有虚拟环境
 conda create -n Pytorch python=3.9                                  创建虚拟环境
 conda activate 环境名                                               激活虚拟环境
