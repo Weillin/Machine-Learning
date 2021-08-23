@@ -58,6 +58,8 @@ sys.path.insert(0, lib_dir)
 git config --global user.name "qwl"
 git config --global user.email "78798894@qq.com"
 
+Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to C:\Users\qwl/.cache\torch\hub\checkpoints\resnet34-b627a593.pth
+
 
 
 
