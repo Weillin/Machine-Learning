@@ -1,11 +1,11 @@
-watch -n 1 nvidia-smi                                               查看显存占有率
+watch -n 1 nvidia-smi                                                                 查看显存占有率
 os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'                           服务挂掉
-print(tf.test.is_gpu_available())                                   查看tensorflow是否在GPU上面运行
-print(torch.cuda.is_available())                                    查看pytorch是否在GPU上面运行
-find / -name VOCtrainval_11-May-2012.tar                                查找文件
-rm -f -r /home/ma-user/data/VOCtrainval_11-May-2012.tar                          删除文件
-you-get -o C:\Users\qwl\Desktop\视频 https://www.bilibili.com/video/BV1FB4y1P7Xq?p=3                           下载视频
-import IPython                 在notebook中嵌入视频
+print(tf.test.is_gpu_available())                                                    查看tensorflow是否在GPU上面运行
+print(torch.cuda.is_available())                                                    查看pytorch是否在GPU上面运行
+find / -name VOCtrainval_11-May-2012.tar                               查找文件
+rm -f -r /home/ma-user/data/VOCtrainval_11-May-2012.tar                                                                                  删除文件
+you-get -o C:\Users\qwl\Desktop\视频 --playlist https://www.bilibili.com/video/BV1264y1i7R1                           下载视频
+import IPython                                                                                                                                                          在notebook中嵌入视频
 IPython.display.HTML('<iframe src="//player.bilibili.com/player.html?aid=714872301&bvid=BV1PX4y1g7KC&cid=316178659&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="850" height="480"> </iframe>')
 
 print(dir(torch.distributions))
@@ -21,17 +21,17 @@ git reset --soft HEAD^
 git reset --hard 71508a005727e8d9b6ddb267671a141d610c9d15
 git reset HEAD
 
-conda env list                                                      显示所有虚拟环境
-conda create -n Pytorch python=3.9                                  创建虚拟环境
+conda env list                                                            显示所有虚拟环境
+conda create -n Pytorch python=3.9                        创建虚拟环境
 conda activate 环境名                                               激活虚拟环境
 conda install nb_conda_kernels
-pip install ipykernel                                               在虚拟环境中安装ipykernel
+pip install ipykernel                                                                   在虚拟环境中安装ipykernel
 python -m ipykernel install --user --name 环境名                    使用ipykernel生成虚拟环境的kernel
-conda deactivate                                                    退出虚拟环境
-jupyter notebook                                                    启动notebook
-torch.cuda.is_available()                                           判断pytorch是否是GPU
-jupyter kernelspec list                                             查看当前的kernel
-jupyter kernelspec uninstall xxx                                    删除notebook kernel
+conda deactivate                                                                      退出虚拟环境
+jupyter notebook                                                                     启动notebook
+torch.cuda.is_available()                                                           判断pytorch是否是GPU
+jupyter kernelspec list                                                              查看当前的kernel
+jupyter kernelspec uninstall xxx                                                删除notebook kernel
 conda remove --name tf2 --all
 conda install nb_conda
 conda install pytorch torchvision torchaudio cudatoolkit=11.1
