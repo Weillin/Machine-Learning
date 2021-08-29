@@ -28,7 +28,7 @@ with open('map.txt', 'r', encoding='utf-8', errors='ignore') as f:
 
 dir_in = 'pytorch'
 for root, dirs, files in os.walk(dir_in):
-    for file_name in files:                                                                               根据后缀获取所有文件路径
+    for file_name in files:                                                                                  根据后缀获取所有文件路径
         if file_name.endswith('.ipynb'):
             file_path = os.path.join(root, file_name)
             print(file_path)
