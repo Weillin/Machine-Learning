@@ -60,7 +60,11 @@ git config --global user.email "78798894@qq.com"
 
 Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to C:\Users\qwl/.cache\torch\hub\checkpoints\resnet34-b627a593.pth
 
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+parser = argparse.ArgumentParser(description='SKYAR')
+parser.add_argument('--path', type=str, default='./config/config-canyon-jupiter.json', metavar='str',
+                    help='configurations')
 
 
 
